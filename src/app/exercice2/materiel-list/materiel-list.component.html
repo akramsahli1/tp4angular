@@ -1,0 +1,10 @@
+<h1>Liste du matériel</h1>
+<ul>
+    <li *ngFor="let t of materiels;"  [ngClass]="{'list-group-item':true,
+    'list-group-item-success': t.repare=='endommagé'
+    }">
+   >
+        <app-materiel [nom]="t.nom" [image]="t.image" 
+        [reference]="t.reference" [prix]="t.prix" [repare]="t.repare"></app-materiel>
+    </li>
+</ul>
